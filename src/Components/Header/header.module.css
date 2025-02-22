@@ -1,0 +1,144 @@
+.header_container {
+  background-color: #131921;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* justify-content: center; */
+  color: white;
+  height: 60px;
+}
+.logo_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 250px;
+  /* background-color: blue; */
+}
+.logo_container img {
+  width: 80%;
+  padding-top: 5px;
+  padding-left: 20px;
+  vertical-align: middle;
+}
+.delivery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  /* font-weight: bold; */
+  padding: 5px;
+}
+.delivery p {
+  font-size: 13px;
+  color: lightgrey;
+}
+.delivery span {
+  margin-top: auto;
+}
+.delivery div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.delivery div span {
+  font-weight: bold;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.search select,
+.search input {
+  padding: 10px;
+  outline: 1px solid white;
+}
+.search select {
+  background-color: lightgrey;
+  border: 1px solid lightgrey;
+  width: 70px;
+}
+.search input {
+  border: 1px solid white;
+  width: 100%;
+  margin-left: -2px;
+}
+.search svg {
+  padding: 7px;
+  background: #febd69;
+  color: black;
+}
+.search svg:hover {
+  background-color: #ca7f1e;
+}
+.search:focus-within {
+  border: 3px solid #eb8e16;
+}
+.order_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  gap: 10px;
+}
+.order_container a {
+  text-decoration: none;
+  color: white;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.order_container a div {
+  display: flex;
+  flex-direction: column;
+  /* background-color: blue; */
+  width: 120px;
+}
+.order_container p {
+  font-size: 10px;
+}
+.order_container a .lang2 {
+  display: flex;
+  flex-direction: row !important;
+  width: 80px;
+  /* padding: 0 10px; */
+  /* background-color: blue; */
+}
+.language select {
+  background-color: #131921;
+  border: none;
+  color: white;
+}
+.language img {
+  width: 40%;
+}
+.cart {
+  position: relative;
+}
+.cart span {
+  position: absolute;
+  font-weight: bold;
+  left: 16px;
+  font-size: 20px;
+  top: 6px;
+  color: orange;
+  background-color: #131921;
+}
+.header_container a:hover,
+.delivery:hover {
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+@media screen and (max-width:576px) {
+    .header_container{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+}
