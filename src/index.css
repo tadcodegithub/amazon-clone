@@ -4,5 +4,6 @@
   box-sizing: border-box;
 }
 :root {
-  
+  --primary-color:#febd69;
+  --primary-shade:#ce8e3b;
 }

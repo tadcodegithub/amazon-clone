@@ -1,5 +1,7 @@
 import React from "react";
 import style from "./product.module.css";
+import Rating from "@mui/material/Rating"
+import CurrencyFormat from "../CurrecyFormat/CurrencyFormat";
 function ProdcutCard({ data }) {
 //   console.log(data);
 const {image, title, id,rating,price}=data
@@ -11,13 +13,15 @@ const {image, title, id,rating,price}=data
       <div>
         <h3>{title}</h3>
         <div className={style.rating}>
-          <p>stars</p>
-          <p>{rating.count}</p>
+          <Rating value={rating.rate} precision={0.1} />
+          <small>{rating.count}</small>
         </div>
         <div>
-            <p>{price}</p>
+            {/* <p>{price}</p> */}
+            <CurrencyFormat amount={price}/>
         </div>
       </div>
+      <button className={style.button}>Add to cart</button>
     </div>
   );
 }
