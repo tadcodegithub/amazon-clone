@@ -1,13 +1,16 @@
-import React from "react";
 import style from "./header.module.css";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import LowerHeader from "./LowerHeader";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from "../DataProvider/DataProvidere";
 function Header() {
+  const [{basket},dispatch]=useContext(DataContext)
+  console.log(basket.length);
   return (
-    <>
+    <div className={style.fixed_Header}>
       <div className={style.header_container}>
         <div className={style.logo_container}>
           <Link to="/">
@@ -32,7 +35,7 @@ function Header() {
             <option value="">Electronics</option>
           </select>
           <input type="text" name="" id="" placeholder="Search Amazon" />
-          <BsSearch size={25} />
+          <BsSearch size={39} />
         </div>
         <div className={style.order_container}>
           <a href="" className={style.language}>
@@ -59,13 +62,13 @@ function Header() {
           </Link>
           <Link to="/cart" className={style.cart}>
             <BiCart size={35} />
-            <span>0</span>
+            <span>{basket.length}</span>
           </Link>
         </div>
       </div>
       <LowerHeader />
-    </>
-  );
+    </div>
+  )
 }
 
 export default Header;

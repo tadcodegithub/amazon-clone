@@ -1,9 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .header_container {
   background-color: #131921;
   display: flex;
   gap: 10px;
   align-items: center;
-  /* justify-content: center; */
   color: white;
   height: 60px;
 }
@@ -17,7 +20,7 @@
 .logo_container img {
   width: 80%;
   padding-top: 5px;
-  padding-left: 20px;
+  margin-left: 20px;
   vertical-align: middle;
 }
 .delivery {
@@ -25,41 +28,35 @@
   justify-content: center;
   align-items: center;
   gap: 3px;
-  /* font-weight: bold; */
+  font-weight: bold;
   padding: 5px;
 }
 .delivery p {
-  font-size: 13px;
-  color: lightgrey;
+  font-size: 12px;
 }
 .delivery span {
   margin-top: auto;
-}
-.delivery div {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.delivery div span {
-  font-weight: bold;
+  font-size: 20px;
 }
 .search {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  overflow: hidden;
   border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  flex: 1;
 }
 .search select,
 .search input {
   padding: 10px;
+  font-weight: bold;
   outline: 1px solid white;
 }
 .search select {
-  background-color: lightgrey;
-  border: 1px solid lightgrey;
-  width: 70px;
+  border: none;
+  max-width: 65px;
+  background-color: gainsboro;
 }
 .search input {
   border: 1px solid white;
@@ -69,13 +66,13 @@
 .search svg {
   padding: 7px;
   background: #febd69;
-  color: black;
+  color: #1a1a1a;
 }
 .search svg:hover {
-  background-color: #ca7f1e;
+  background-color: #d49644;
 }
 .search:focus-within {
-  border: 3px solid #eb8e16;
+  border: 2px solid #ff9900;
 }
 .order_container {
   display: flex;
@@ -87,26 +84,14 @@
 .order_container a {
   text-decoration: none;
   color: white;
-  height: 52px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.order_container a div {
-  display: flex;
-  flex-direction: column;
-  /* background-color: blue; */
-  width: 120px;
 }
 .order_container p {
   font-size: 10px;
 }
-.order_container a .lang2 {
+.language {
   display: flex;
-  flex-direction: row !important;
-  width: 80px;
-  /* padding: 0 10px; */
-  /* background-color: blue; */
+  width: 100px;
+  padding: 10px;
 }
 .language select {
   background-color: #131921;
@@ -122,45 +107,54 @@
 .cart span {
   position: absolute;
   font-weight: bold;
-  left: 16px;
+  top: -7px;
   font-size: 20px;
-  top: 6px;
-  color: orange;
   background-color: #131921;
+  left: 16px;
+  color: orange;
 }
-.header_container a:hover,
-.delivery:hover {
+.order_container a:hover,
+.delivery:hover,
+.lower_header ul li:hover,
+.logo_container a:hover {
   border: 1px solid white;
   border-radius: 3px;
 }
+/* for lower container */
 .lower_header {
   background-color: #232f3e;
   color: white;
 }
 .lower_header ul {
   display: flex;
-  gap: 10px;
   list-style: none;
+  gap: 5px;
 }
 .lower_header ul li {
   padding: 8px;
 }
 .lower_header ul li:first-child {
   display: flex;
-  gap: 3px;
+  gap: 2px;
   align-items: center;
 }
-
+/* this is to make header fixed */
+.fixed_Header{
+  position:sticky;
+  top:0;
+  z-index: 100;
+}
+/* //to add responsiveness */
 @media screen and (max-width: 576px) {
   .header_container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     height: auto;
   }
   .lower_header ul li:not(:first-child) {
-    display: none !important;
+    display: none;
   }
   .language {
-    display: none !important;
+    display: none;
   }
 }

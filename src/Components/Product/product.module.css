@@ -50,3 +50,25 @@
     gap: 75px;
     justify-items: center;
 }
+/* for flexed style */
+.product_flexed{
+    box-shadow: none;
+    height: auto;
+    display: flex;
+    gap:50px;
+    width: 100%;
+}
+.product_flexed  h3{
+    padding:25px 0px ;
+}
+.product_flexed .button{
+display: block;
+position: static;
+width: 150px;
+margin-right: 40px;
+}
+.product_flexed img{
+    width: 300px !important;
+    height: auto;
+    object-fit: contain;
+}
