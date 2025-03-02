@@ -103,15 +103,22 @@
 }
 .cart {
   position: relative;
+  margin-right: 10px;
+}
+.cart img{
+  width: 75px;
+  /* margin: 5px; */
 }
 .cart span {
   position: absolute;
-  font-weight: bold;
-  top: -7px;
-  font-size: 20px;
-  background-color: #131921;
-  left: 16px;
+  font-weight: 800;
+  font-family: sans-serif;
+  top: -2px;
+  font-size: 12px;
+  /* background-color: #131921; */
+  left: 17px;
   color: orange;
+  z-index: 100;
 }
 .order_container a:hover,
 .delivery:hover,

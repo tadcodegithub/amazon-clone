@@ -7,7 +7,7 @@ function Product() {
     useEffect (()=>{
     axios.get("https://fakestoreapi.com/products")
     .then((res)=>{
-        console.log(res);
+        // console.log(res);
         setProducts(res.data);
     })
     .catch((err)=>{console.log(err);
@@ -17,7 +17,7 @@ function Product() {
     <div className={style.product_contianer}>
       {
         products?.map((single_product,i)=>{
-            return  <ProdcutCard key={i} data={single_product} />
+            return <ProdcutCard key={i} data={single_product} renderADD ={true}/>
         })
       }
     </div>

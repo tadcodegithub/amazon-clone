@@ -5,7 +5,7 @@ import CurrencyFormat from "../CurrecyFormat/CurrencyFormat"
 import { Link } from "react-router-dom"
 import { DataContext } from "../DataProvider/DataProvidere"
 import { Type } from "../../Utility/action.type"
-function ProdcutCard({ data, flex, renderDesc }) {
+function ProdcutCard({ data, flex, renderDesc, renderADD }) {
     // console.log(data);
   const { image, title, id, rating, price, description } = data
   const [state,dispatch]=useContext(DataContext)
@@ -24,7 +24,7 @@ function ProdcutCard({ data, flex, renderDesc }) {
       </Link>
       <div>
         <h3>{title}</h3>
-        {renderDesc && <div style={{maxWidth:"700px"}}>{description}</div>}
+        {renderDesc && <div style={{ maxWidth: "700px" }}>{description}</div>}
         <div className={style.rating}>
           <Rating value={rating.rate} precision={0.1} />
           <small>{rating.count}</small>
@@ -33,7 +33,11 @@ function ProdcutCard({ data, flex, renderDesc }) {
           {/* <p>{price}</p> */}
           <CurrencyFormat amount={price} />
         </div>
-        <button className={style.button} onClick={addToCart}>Add to cart</button>
+        {renderADD && (
+          <button className={style.button} onClick={addToCart}>
+            Add to cart
+          </button>
+        )}
       </div>
     </div>
   )

@@ -8,7 +8,9 @@ import { useContext } from "react";
 import { DataContext } from "../DataProvider/DataProvidere";
 function Header() {
   const [{basket},dispatch]=useContext(DataContext)
-  console.log(basket.length);
+ 
+  const totalProduct=basket.reduce((sum,item)=>sum+item.amount,0)
+   console.log(totalProduct)
   return (
     <div className={style.fixed_Header}>
       <div className={style.header_container}>
@@ -61,8 +63,9 @@ function Header() {
             <span>&Orders</span>
           </Link>
           <Link to="/cart" className={style.cart}>
-            <BiCart size={35} />
-            <span>{basket.length}</span>
+            {/* <BiCart size={35} /> */}
+            <img src="/cart2.png" alt="" />
+            <span>{totalProduct}</span>
           </Link>
         </div>
       </div>

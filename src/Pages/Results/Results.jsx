@@ -36,7 +36,13 @@ function Results() {
         ) : (
           <div className={style.products_container}>
             {results?.map((singleProduct) => {
-              return <ProdcutCard key={singleProduct.id} data={singleProduct} />
+              return (
+                <ProdcutCard
+                  key={singleProduct.id}
+                  data={singleProduct}
+                  renderADD={true}
+                />
+              )
             })}
           </div>
         )}

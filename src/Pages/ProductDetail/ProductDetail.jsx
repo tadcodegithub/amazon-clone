@@ -27,9 +27,11 @@ function ProductDetail() {
   },[])
   return (
     <LayOut>
-      {isLoading?(<Loader />):( <ProdcutCard data={product} flex={true} renderDesc={true}/>)}
-       
-    
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <ProdcutCard data={product} flex={true} renderDesc={true} renderADD ={true}/>
+      )}
     </LayOut>
   )
 }
