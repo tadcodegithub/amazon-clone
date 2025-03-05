@@ -9,6 +9,7 @@ export const reducer = (state, action) => {
       if (!isexist) {
         return {
           ...state,
+
           basket: [...state.basket, { ...action.item, amount: 1 }],
         }
       } else {

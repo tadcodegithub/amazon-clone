@@ -84,6 +84,9 @@
 .order_container a {
   text-decoration: none;
   color: white;
+  height: 55px;
+  display: flex;
+  align-items: center;
 }
 .order_container p {
   font-size: 10px;
@@ -105,7 +108,7 @@
   position: relative;
   margin-right: 10px;
 }
-.cart img{
+.cart img {
   width: 75px;
   /* margin: 5px; */
 }
@@ -113,10 +116,10 @@
   position: absolute;
   font-weight: 800;
   font-family: sans-serif;
-  top: -2px;
+  top: 15px;
   font-size: 12px;
   /* background-color: #131921; */
-  left: 17px;
+  left: 22px;
   color: orange;
   z-index: 100;
 }
@@ -146,9 +149,9 @@
   align-items: center;
 }
 /* this is to make header fixed */
-.fixed_Header{
-  position:sticky;
-  top:0;
+.fixed_Header {
+  position: sticky;
+  top: 0;
   z-index: 100;
 }
 /* //to add responsiveness */

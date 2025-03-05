@@ -10,6 +10,7 @@ function Header() {
   const [{basket},dispatch]=useContext(DataContext)
  
   const totalProduct=basket.reduce((sum,item)=>sum+item.amount,0)
+ 
    console.log(totalProduct)
   return (
     <div className={style.fixed_Header}>
