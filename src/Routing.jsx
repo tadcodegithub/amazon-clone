@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import Landing from "./Pages/Landing/Landing"
 import SignUp from "./Pages/Auth/SignUp"
 import Orders from "./Pages/Orders/Orders"
@@ -10,7 +10,7 @@ function Routing() {
   return (
     <div>
       <Router>
-        <Routes>
+        <Routes basename="/amazon-clone">
           <Route path="/" element={<Landing />} />
           <Route path="/auth" element={<SignUp />} />
           <Route path="/orders" element={<Orders />} />
