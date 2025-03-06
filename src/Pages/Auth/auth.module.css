@@ -1,0 +1,77 @@
+.login
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login img{
+ width: 100px;
+margin: 30px;
+object-fit: contain;
+}
+.loginContainer
+{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 7px ;
+    padding: 20px;
+}
+.loginContainer h1{
+    font-size: 25px;
+    margin: 20px 0px;
+}
+.loginContainer form
+{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.loginContainer form div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.loginContainer form input{
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    background-color: white;
+    width: 100%;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.loginContainer form input:focus
+{
+    outline: 2px solid skyblue;
+}
+.login_signInBtn{
+    border: none;
+    background-color: #f0c14b;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.login_signInBtn:hover{
+    background-color: var(--primary-shade);
+}
+.loginContainer p{
+    padding: 10px 0px;
+    font-size: 14px;
+}
+.login_registerBtn{
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.login_registerBtn:hover{
+    background: lightgray;
+}
